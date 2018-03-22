@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+	<title></title>
+</head>
+<body>
+	<div class="container container-fluid" id="viewPickerRegion"></div>
+	<div class="container container-fluid" id="mainRegion"></div>
+	<!--
+	<div class="container container-fluid" id="newPostRegion"></div>
+	<div class="container container-fluid" id="postsRegion"></div>
+	-->
+<!-- Templates -->
+	<script type="text/template" id="viewPicker">
+		<p>What do you want to do?</p>
+		<p><button class="btn btn-primary" id="viewNew">Write Post</button> <button class="btn btn-primary" id="viewPosts">View Posts</button></p>
+	</script>
+
+	<script type="text/template" id="post">
+		<p><strong><%= author %>:</strong> <%= text %> <button class="btn btn-danger" id="delete">Delete</button></p>
+	</script>
+
+	<script type="text/template" id="newPost">
+		<p>Name: <input type="text" id="postAuthorInput"></p>
+		<p>Message: <input type="text" id="postTextInput"></p>
+		<button class="btn btn-success" id="send">Send</button>
+	</script>
+
+	<script type="text/template" id="emptyView">
+		<p>Nothing to see here!</p>
+	</script>
+
+
+	<script type="text/template" id="posts">
+		<div id="childSpace"></div>
+	</script>
+
+<!-- Importera scripts -->
+	<script src="js/bower_components/jquery/dist/jquery.js"></script>
+	<script src="js/bower_components/lodash/dist/lodash.js"></script>
+	<!--<script src="js/bower_components/underscore/underscore.js"></script>-->
+	<script src="js/bower_components/backbone/backbone.js"></script>
+	<script src="js/bower_components/backbone.marionette/lib/backbone.marionette.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
